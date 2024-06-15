@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --AlmostWhite: hsl(0, 0%, 98%);
+  --MediumGray: hsl(0, 0%, 41%);
+  --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--AlmostWhite);
+  font-family: "Epilogue", sans-serif;
+}
+
+header {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_logo {
+  width: max-content;
+}
+
+.nav-brand:focus {
+  outline: 2px solid var(--AlmostBlack);
+  outline-offset: 2px;
+}
+
+.header__nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1111;
+}
+
+.header__nav {
+  overflow: auto;
+  z-index: 111;
+  background-color: var(--AlmostWhite);
+  width: 0vw;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  box-shadow: 0px 0 0px 0 rgba(0, 0, 0, 0.7);
+  transition: all 0.8s ease-in-out;
+}
+
+.nav-toggle {
+  padding: 20px;
+}
+
+.nav__list {
+  margin-block-start: 5rem;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--MediumGray);
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: var(--AlmostBlack);
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__dropdown {
+  display: none;
+  list-style-type: none;
+  padding: 15px 15px 0px;
+  transition: all 0.8s ease-in-out;
+}
+
+.nav__dropdown-link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--MediumGray);
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.nav__dropdown-link:hover {
+  color: var(--AlmostBlack);
+}
+
+.nav__dropdown-link > img {
+  width: 20px;
+}
+
+.header__auth {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__login {
+  display: block;
+  text-decoration: none;
+  color: var(--MediumGray);
+  font-weight: 500;
+}
+
+.header__register {
+  margin-block: 15px;
+  padding: 10px;
+  width: 90%;
+  border-radius: 15px;
+  border: 2px solid var(--MediumGray);
+  background-color: transparent;
+  font-size: 0.9em;
+  color: var(--MediumGray);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.header__register:hover {
+  border: 2px solid var(--AlmostBlack);
+  color: var(--AlmostBlack);
+}
+
+section {
+  padding-block: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-img > img {
+  width: 100vw;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.home__section-inro {
+  padding-inline: 10px;
+  margin-top: 2.2rem;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.01em;
+  color: var(--MediumGray);
+  font-weight: 500;
+}
+
+.learn-more-button {
+  margin-top: 0.8rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 12px;
+  background-color: var(--AlmostBlack);
+  color: var(--AlmostWhite);
+  font-weight: 600;
+  border: 1px solid var(--AlmostBlack);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: transparent;
+  color: var(--AlmostBlack);
+}
+
+.learn-more-button:focus {
+  outline: 3px solid var(--AlmostBlack);
+  outline-offset: 2px;
+}
+
+.listed-company-wrap {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 3rem auto;
+  justify-content: center;
+  gap: 12%;
+  padding-inline: 35px;
+}
+
+.listed-company-wrap > img {
+  width: 25%;
+}
+
+@media (orientation: landscape) {
+  h1 {
+    font-size: 3em;
+  }
+  .listed-company-wrap > img {
+    width: 100%;
+  }
+
+  .learn-more-button {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  .listed-company-wrap > img {
+    width: 100%;
+  }
+
+  .learn-more-button {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding-inline: 1.5rem;
+  }
+  .header {
+    gap: 50px;
+  }
+  .header__nav-toggle {
+    display: none;
+  }
+  .header__nav {
+    position: static;
+    width: 100%;
+  }
+
+  .nav-toggle {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+  }
+  .header__auth {
+    flex-direction: row;
+    margin: 0;
+    gap: 50px;
+  }
+  .header__register {
+    width: 120px;
+    font-size: 0.85em;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .nav__dropdown {
+    position: absolute;
+    left: 56px;
+    top: 70px;
+    display: none;
+    background-color: white;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    transform: scale(0.9);
+  }
+
+  .nav__dropdown-link {
+    font-size: 0.85em;
+  }
+
+  .company_dropdown {
+    left: 280px;
+  }
+
+  section {
+    padding-inline: 2rem;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    order: 1;
+  }
+
+  .desktop-img > img {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: start;
+    text-wrap: balance;
+    font-size: clamp(3.7em, 5vw, 5em);
+    line-height: 50px;
+  }
+
+  .description {
+    margin-top: 3rem;
+    text-align: start;
+    padding: 0;
+    font-size: 1em;
+  }
+
+  .home__section-inro {
+    padding-inline: 10px;
+    margin-top: 5rem;
+    height: 100%;
+  }
+
+  .learn-more-button {
+    margin: 3rem 0;
+    position: static;
+    left: 0;
+    transform: translateX(0);
+    width: 200px;
+  }
+
+  .listed-company-wrap {
+    margin-block-start: 5rem;
+    margin-bottom: 0;
+  }
+
+  .listed-company-wrap > img {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1114px) {
+  .desktop-img > img {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  section {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .desktop-img > img {
+    margin: 0 auto;
+    width: 85%;
+  }
+  .listed-company-wrap > img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  section {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .desktop-img > img {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .listed-company-wrap {
+    margin-block-start: 5rem;
+    margin-bottom: 0;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .listed-company-wrap > img {
+    width: 100%;
+  }
+}
+
+.drop {
+  display: block;
+}
+
+.collapse {
+  width: 65vw;
+  right: 0;
+  box-shadow: 0 0 0px 100vw rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 1728px) {
+  .desktop-img > img {
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  .home__section-inro {
+    margin-top: 8%;
+  }
+
+  .nav__dropdown {
+    top: 80px;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .desktop-img > img {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .home__section-inro {
+    margin-top: 10%;
+  }
+  .learn-more-button {
+    width: 300px;
+    padding: 20px;
+  }
+  .desktop-img > img {
+    width: 80%;
+  }
+  .listed-company-wrap {
+    margin-block-start: 10rem;
+  }
+}
