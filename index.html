@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header_logo">
+          <a href="#" class="nav-brand">
+            <img
+              src="images/logo.svg"
+              alt="brandlogo"
+              class="header-logo-image"
+            />
+          </a>
+        </div>
+        <button class="header__nav-toggle">
+          <img src="images/icon-menu.svg" alt="" class="header__nav-icon" />
+        </button>
+        <div class="header__nav nav-collapse">
+          <nav class="navigation-toggle nav-toggle">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link dropdown features_dropdown"
+                  >Features
+                  <img
+                    src="images/icon-arrow-down.svg"
+                    class="nav__arrow-icon"
+                    alt="arrow up"
+                /></a>
+                <ul class="nav__dropdown">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link"
+                      ><img src="images/icon-todo.svg" alt="todo icon" />Todo
+                      List</a
+                    >
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">
+                      <img
+                        src="images/icon-calendar.svg"
+                        alt="calendar icon"
+                      />Calendar</a
+                    >
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">
+                      <img
+                        src="images/icon-reminders.svg"
+                        alt="reminders icon"
+                      />Reminders</a
+                    >
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">
+                      <img
+                        src="images/icon-planning.svg"
+                        alt="planning icon"
+                      />Planning</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link dropdown"
+                  >Company
+                  <img
+                    class="nav__arrow-icon"
+                    src="images/icon-arrow-down.svg"
+                    alt="arrow up"
+                /></a>
+                <ul class="nav__dropdown company_dropdown">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">History</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Our team</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link"> Careers </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">About</a>
+              </li>
+            </ul>
+
+            <div class="header__auth">
+              <a href="#" class="header__login">Login</a>
+              <button class="header__register">Register</button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="wrapper">
+          <div class="home__section-img desktop-img">
+            <img
+              src="images/image-hero-desktop.png"
+              alt="vector of boy with laptop"
+            />
+          </div>
+
+          <div class="home__section-img mobile-img">
+            <img
+              src="images/image-hero-mobile.png"
+              alt="vector of boy with laptop"
+            />
+          </div>
+
+          <div class="home__section-inro">
+            <h1>Make remote work</h1>
+            <p class="description">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+
+            <button class="learn-more-button">Learn more</button>
+
+            <div class="listed-company-wrap">
+              <img src="images/client-databiz.svg" alt="" />
+              <img src="images/client-audiophile.svg" alt="" />
+              <img src="images/client-meet.svg" alt="" />
+              <img src="images/client-maker.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
